@@ -1,0 +1,36 @@
+{
+  "name": "cova",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadiannis/cova.git"
+  },
+  "keywords": [],
+  "author": "Annisa Nadia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nadiannis/cova/issues"
+  },
+  "homepage": "https://github.com/nadiannis/cova#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
