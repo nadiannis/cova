@@ -1,0 +1,25 @@
+$break-small: 375px
+$break-medium: 768px
+$break-large: 1024px
+
+@mixin respond-to($media)
+  @if $media == small-to-medium
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1)
+      @content
+  
+  @else if $media == medium-to-wide
+    @media only screen and (min-width: $break-medium) and (max-width: $break-larger - 1)
+      @content
+
+  @else if $media == small-and-larger
+    @media only screen and (min-width: $break-small)
+      @content
+
+  @else if $media == medium-and-larger
+    @media only screen and (min-width: $break-medium)
+      @content;
+  
+  @else if $media == wide-and-larger
+    @media only screen and (min-width: $break-large)
+      @content
+  
