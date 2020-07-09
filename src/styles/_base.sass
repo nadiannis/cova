@@ -1,9 +1,16 @@
 *, *::after, *::before
   box-sizing: border-box
 
+html 
+  font-size: 16px
+
 body 
   padding: 0
   background: $white
   color: $text-primary
-  font-size: 16px
   @include font($font-sans, $font-normal)
+
+.container
+  width: 86%
+  max-width: 1620px
+  margin: 0 auto
