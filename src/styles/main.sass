@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap')
 
-@import normalize
-@import colors
-@import type
-@import base
-@import typography
+// 1. Config files & helpers
+@import abstracts/colors
+@import abstracts/type
+@import abstracts/media-queries
+
+// 2. Vendor
+@import vendor/normalize
+
+// 3. Base styles
+@import base/base
+@import base/typography
