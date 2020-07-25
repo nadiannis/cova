@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, h6
+  @include font($font-serif, $font-bold)
+  line-height: 1.1
+
+h1:last-child, h2:last-child, h3:last-child, 
+h4:last-child, h5:last-child, h6:last-child, 
+p:last-child
+  margin: 0
+
+p 
+  font-size: $text-smscr
+  line-height: 1.6
+  @include font($font-sans, $font-normal)
+  @include respond-to(medium-and-larger)
+    font-size: $text-lgscr
