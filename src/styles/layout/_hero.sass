@@ -10,15 +10,37 @@
   position: relative 
   z-index: 1
 
+  @include respond-to(medium-and-larger)
+    background: url('../images/hero-bg.jpg') no-repeat 10% 85%
+    background-size: cover
+
+  .hero-text
+    @include respond-to(medium-and-larger)
+      text-align: left
+
   .intro-text 
     font-size: $title-lg-smscr
     margin: 0 0 1.3em 0
     color: $text-inverse
 
+    @include respond-to(medium-and-larger)
+      font-size: $title-lg-lgscr
+      margin: 0 0 0.7em 0
+
+    @include respond-to(small-to-medium)
+      font-size: 2.1rem
+
     .intro-text-sm
       font-size: 1.5rem
       display: block
       margin-top: .65em
+
+      @include respond-to(medium-and-larger)
+        font-size: 2.4rem
+        margin-top: .3em
+
+      @include respond-to(small-to-medium)
+        font-size: 1.7rem
   
   .scroll-down-btn 
     position: absolute
