@@ -7,6 +7,15 @@ header
   left: 0
   z-index: 2
 
+  @include respond-to(medium-and-larger)
+    padding: 1.2em 0
+
+  .container
+    @include respond-to(medium-and-larger)
+      display: flex
+      align-items: center
+      justify-content: space-between
+
   .logo-link,
   .nav-link
     color: $text-inverse
@@ -16,6 +25,9 @@ header
     display: block
     text-align: center
     order: 2
+
+    @include respond-to(medium-and-larger)
+      order: 1
 
   .logo
     font-size: 1rem
@@ -28,6 +40,14 @@ header
     align-items: center
     margin-top: -21px
 
+    @include respond-to(medium-and-larger)
+      order: 2
+      margin-top: auto
+
+  .nav
+    @include respond-to(medium-and-larger)
+      margin-right: 2.3em
+
   .menu-btn
     cursor: pointer
     display: block
@@ -39,6 +59,9 @@ header
     justify-content: space-evenly
     position: relative
     z-index: 3
+
+    @include respond-to(medium-and-larger)
+      display: none
 
     .line
       width: 100%
@@ -62,16 +85,37 @@ header
     box-shadow: 4px 0px 10px 8px rgba(0, 0, 0, 0.15)
     transition: left .2s cubic-bezier(1, 0, 0, 1)
 
+    @include respond-to(medium-and-larger)
+      position: static
+      padding: 0
+      width: auto
+      height: auto 
+      max-width: none
+      background: transparent
+      box-shadow: none
+      display: flex 
+
     .nav-item
       padding: .7em 0 .7em 1.4em
       cursor: pointer
       transition: background .3s ease
+
+      @include respond-to(medium-and-larger)
+        padding: 0 0 0 2em
+        cursor: auto
       
       &:hover
         background: darken($secondary, 2)
 
+        @include respond-to(medium-and-larger)
+          background: transparent
+
     .nav-link 
       transition: color .3s ease
+
+      &:hover  
+        @include respond-to(medium-and-larger)
+          color: #d5d5d5
 
   .nav-show
 
