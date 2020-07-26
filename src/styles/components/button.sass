@@ -1,0 +1,20 @@
+.btn
+  padding: .9em 1.3em
+  border-radius: 8px
+  border: none
+  outline: none
+  cursor: pointer
+
+.btn-primary
+  background: $primary
+  color: $text-inverse
+  font-size: 1.125rem
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.25)
+  transition: all .2s ease-out
+
+  &:hover
+    background: darken($primary, 6)
+    box-shadow: none
+
+  @include respond-to(medium-and-larger)
+    font-size: 1.3rem

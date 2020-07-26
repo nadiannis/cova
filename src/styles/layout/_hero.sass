@@ -1,0 +1,28 @@
+.hero
+  text-align: center
+  width: 100%
+  height: 100vh
+  background: $grey
+  background: url('../images/hero-bg.jpg') no-repeat 32% center
+  background-size: cover
+  display: flex
+  align-items: center
+  position: relative 
+  z-index: 1
+
+  .intro-text 
+    font-size: $title-lg-smscr
+    margin: 0 0 1.3em 0
+    color: $text-inverse
+
+    .intro-text-sm
+      font-size: 1.5rem
+      display: block
+      margin-top: .65em
+  
+  .scroll-down-btn 
+    position: absolute
+    left: 50%
+    bottom: 100px
+    transform: translateX(-50%)
+    cursor: pointer

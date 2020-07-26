@@ -1,0 +1,92 @@
+header
+  background: transparent
+  padding: 1.6em 0
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 2
+
+  .logo-link,
+  .nav-link
+    color: $text-inverse
+    text-decoration: none
+
+  .logo-link
+    display: block
+    text-align: center
+    order: 2
+
+  .logo
+    font-size: 1rem
+    letter-spacing: 6.08px
+    @include font($font-sans, $font-normal)
+
+  .menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: -21px
+
+  .menu-btn
+    cursor: pointer
+    display: block
+    order: 1
+    width: 23px
+    height: 23px
+    display: flex 
+    flex-direction: column
+    justify-content: space-evenly
+    position: relative
+    z-index: 3
+
+    .line
+      width: 100%
+      height: 1.3px
+      background: $white
+      transition: all .3s
+
+  .nav-list
+    background: $secondary
+    font-size: 1.25rem
+    font-weight: $font-normal
+    list-style: none
+    margin: 0
+    padding: 4.5em 0 0 0
+    position: absolute
+    top: 0
+    left: -80%
+    max-width: 260px
+    width: 65%
+    height: 100vh
+    box-shadow: 4px 0px 10px 8px rgba(0, 0, 0, 0.15)
+    transition: left .2s cubic-bezier(1, 0, 0, 1)
+
+    .nav-item
+      padding: .7em 0 .7em 1.4em
+      cursor: pointer
+      transition: background .3s ease
+      
+      &:hover
+        background: darken($secondary, 2)
+
+    .nav-link 
+      transition: color .3s ease
+
+  .nav-show
+
+    .nav-list
+      left: -1px
+
+    .line-1
+      transform: rotateZ(-45deg) translate(-3px, 3px)
+
+    .line-2
+      transform: rotateZ(45deg) translate(-3px, -3px)
+  
+  .subscribe-btn,
+  .subscribe-icon
+    display: block
+  
+  .subscribe-btn
+    order: 3
