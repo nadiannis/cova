@@ -6,27 +6,86 @@
     width: 100%
     object-fit: cover
 
+    @include respond-to(medium-and-larger)
+      width: 50%
+      flex: 1
+
   .about-coffee-desc 
     padding: 0.2em 0 4.5em
 
+    @include respond-to(medium-and-larger)
+      flex: 1 
+      text-align: left
+      padding: 0 6% 0 4.7%
+
+    @include respond-to(small-to-medium)
+      padding: 0.2em 2.5em 4.5em
+
   .about-coffee-heading
     font-size: $title-md-smscr
+
+    @include respond-to(medium-and-larger)
+      font-size: $title-md-lgscr
+      margin: 0 0 .5em
+
+    @include respond-to(medium-to-medium-plus)
+      font-size: 2.1rem
   
   .about-coffee-text 
     color: $text-secondary
     padding-bottom: 1.2em
+
+    @include respond-to(medium-and-larger)
+      padding-bottom: .7em
+
+    @include respond-to(medium-to-medium-plus)
+      font-size: 1.1rem
+
+  button
+    @include respond-to(medium-to-medium-plus)
+        font-size: 1rem
+
+.about-coffee-taste 
+  @include respond-to(medium-and-larger)
+    display: flex
+    align-items: center
+
+.about-coffee-beans
+  @include respond-to(medium-and-larger)
+    display: flex
+    align-items: center
+    flex-direction: row-reverse
 
 .about-open
   background: $secondary
   color: $text-inverse
   padding: 2.5em 0
 
+  @include respond-to(medium-and-larger) 
+    padding: 3.6em 0
+
   .about-open-heading 
     margin-top: 0
     font-size: 1.375rem
+
+    @include respond-to(medium-and-larger) 
+      font-size: $title-sm-lgscr
+
+    @include respond-to(medium-to-medium-plus)
+        font-size: 1.8rem
+
+  .about-open-text
+    @include respond-to(medium-to-medium-plus)
+      font-size: 1.1rem
 
     .day-open 
       display: block
       font-size: 1.06rem
       margin-bottom: .4em
       @include font($font-serif, $font-bold)
+
+      @include respond-to(medium-and-larger) 
+        font-size: 1.57rem
+
+      @include respond-to(medium-to-medium-plus)
+          font-size: 1.3rem
