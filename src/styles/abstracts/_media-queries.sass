@@ -9,6 +9,10 @@ $break-extra-large: 1680px
     @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1)
       @content
   
+  @if $media == small-to-medium-plus
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium-plus - 1)
+      @content
+
   @else if $media == medium-to-medium-plus
     @media only screen and (min-width: $break-medium) and (max-width: $break-medium-plus - 1)
       @content
@@ -23,6 +27,10 @@ $break-extra-large: 1680px
 
   @else if $media == medium-and-larger
     @media only screen and (min-width: $break-medium)
+      @content
+
+  @else if $media == medium-plus-and-larger
+    @media only screen and (min-width: $break-medium-plus)
       @content
   
   @else if $media == wide-and-larger
