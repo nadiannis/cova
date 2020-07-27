@@ -12,4 +12,31 @@
 
 .swiper-pagination-bullet-active
   background: $primary
-  border: none
+  border: none 
+
+.gallery
+  .swiper-container
+    width: 100%
+    margin-bottom: .3em
+
+    @include respond-to(medium-plus-and-larger)
+      margin-bottom: 0
+
+  .swiper-wrapper 
+    @include respond-to(medium-plus-and-larger)
+      padding-bottom: 0
+
+  .swiper-slide 
+    display: flex 
+    align-items: center
+
+  .swiper-pagination-bullets
+    @include respond-to(medium-plus-and-larger)
+      display: none
+
+  .swiper-button
+    color: $white
+    display: none
+
+    @include respond-to(medium-plus-and-larger)
+      display: block
