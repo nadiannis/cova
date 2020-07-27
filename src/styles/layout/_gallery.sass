@@ -1,19 +1,40 @@
 .gallery
   padding: 1.25em 0 0
 
+  @include respond-to(medium-plus-and-larger)
+    padding: 0
+
 .gallery-image 
   width: 100%
   height: 300px
   object-fit: cover
   display: block
 
+  @include respond-to(wide-and-larger)
+    height: 400px
+
+  @include respond-to(extra-wide-and-larger)
+    height: 640px
+
 .gallery-addition
-  text-align: center 
+  text-align: center
+
+  @include respond-to(medium-plus-and-larger)
+    display: flex
+    flex-direction: row-reverse
+    max-height: 100vh 
 
   img 
     width: 100%
     object-fit: cover
     display: block
+
+    @include respond-to(medium-plus-and-larger)
+      width: 33.35%
+
+    @include respond-to(small-to-medium-plus)
+      height: 375px
+      object-position: center 65%
 
 .gallery-cta 
   height: 321px
@@ -24,6 +45,25 @@
   background: url('../images/come-taste-it-bg.jpg') no-repeat 32% center
   background-size: cover
 
+  @include respond-to(medium-plus-and-larger)
+    height: auto
+    flex: 1
+
+  @include respond-to(small-to-medium-plus)
+    height: 375px
+    padding: 0 0 2.5em 
+
   .cta-heading 
     margin-bottom: 1em
     font-size: $title-lg-smscr
+
+    @include respond-to(medium-plus-and-larger)
+      font-size: $title-lg-lgscr
+      margin-bottom: .7em
+
+    @include respond-to(small-to-medium-plus)
+      font-size: 2.1rem
+
+  button
+    @include respond-to(small-to-medium-plus)
+      font-size: 1.125rem
