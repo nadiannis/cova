@@ -52,3 +52,20 @@ const swiperGallery = new Swiper('.swiper-container-gallery', {
     }
   }
 });
+
+
+/*** Testimonial ***/
+
+const swiperTesti = new Swiper('.swiper-container-testimonial', {
+  slidesPerView: 1,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
