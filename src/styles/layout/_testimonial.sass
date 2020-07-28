@@ -2,14 +2,40 @@
   text-align: center
   padding: 4.2em 0 3em
 
+  @include respond-to(medium-and-larger) 
+    padding: 7.2em 0 5.5em
+
+  @include respond-to(extra-wide-and-larger) 
+    padding: 9.2em 0 7.5em
+
   .testimonial-heading 
     margin: 0 0 1.5em
     font-size: $title-sm-smscr
+
+    @include respond-to(medium-plus-and-larger) 
+      font-size: $title-sm-lgscr
+
+    @include respond-to(medium-to-medium-plus)
+      font-size: 1.8rem
+
+  .testimonial-content
+    @include respond-to(medium-and-larger) 
+      width: 55%
+      margin: 0 auto
 
   .name 
     font-size: 1.06rem
     margin: 0 0 .9em
     @include font($font-serif, $font-bold)
 
+    @include respond-to(medium-plus-and-larger) 
+      font-size: 1.57rem
+
+    @include respond-to(medium-to-medium-plus)
+      font-size: 1.3rem
+
   .testi 
     color: $text-secondary
+
+    @include respond-to(medium-to-medium-plus)
+      font-size: 1.1rem
