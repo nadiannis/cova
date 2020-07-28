@@ -1,0 +1,28 @@
+footer 
+  text-align: center
+  padding: 2em 0
+  background: $secondary
+  color: $text-inverse
+
+  .social-media
+    display: flex
+    justify-content: space-between
+    width: 110px
+    margin: 0 auto .7em
+
+    @include respond-to(extra-wide-and-larger)
+      width: 150px
+
+  .social-link 
+    display: block
+
+    img
+      display: block
+      width: 20px 
+
+      @include respond-to(extra-wide-and-larger)
+        width: 30px
+
+  span 
+    display: block 
+    font-size: .7rem
