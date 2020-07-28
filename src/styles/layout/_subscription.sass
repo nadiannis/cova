@@ -2,9 +2,19 @@
   text-align: center 
   padding: 4.2em 0 8.2em
 
+  @include respond-to(medium-and-larger)
+    padding: 4.2em 0 11em
+
   .subscription-heading
     font-size: $title-md-smscr
     margin-bottom: 1.3em
+
+    @include respond-to(medium-and-larger)
+      font-size: $title-md-lgscr 
+      margin-bottom: 1.1em
+
+    @include respond-to(extra-wide-and-larger)
+      margin-bottom: 1em
 
   form 
     display: flex
@@ -13,6 +23,12 @@
     max-width: 350px
     margin: 0 auto
 
+    @include respond-to(medium-and-larger)
+      max-width: 450px
+
+    @include respond-to(extra-wide-and-larger)
+      max-width: 640px
+
   input 
     padding: .81em 1.3em
     border-radius: 8px
@@ -20,6 +36,10 @@
     outline: none
     margin-bottom: 1em
     font-size: 1rem
+
+    @include respond-to(medium-and-larger)
+      padding: 1em 1.3em
+      font-size: 1.125rem
 
     &:focus
       outline: none
