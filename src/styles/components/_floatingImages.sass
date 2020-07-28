@@ -7,7 +7,35 @@
   bottom: 370px
   left: -15px
 
+  @include respond-to(medium-and-larger)
+    width: 400px
+    left: -28px
+
+  @include respond-to(medium-plus-and-larger)
+    width: 470px
+    left: -34px
+
+  @include respond-to(extra-wide-and-larger)
+    width: 600px
+    bottom: 570px
+    left: -42px
+
 .coffee-cup-2 
   width: 176px
   bottom: 100px
   right: -95px
+
+  @include respond-to(medium-and-larger)
+    width: 376px
+    bottom: 215px
+    right: -240px
+
+  @include respond-to(medium-plus-and-larger)
+    width: 550px
+    bottom: 160px
+    right: -360px
+
+  @include respond-to(extra-wide-and-larger)
+    width: 834px
+    bottom: 220px
+    right: -540px
