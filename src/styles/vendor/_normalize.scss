@@ -176,6 +176,7 @@ textarea {
 button,
 input { /* 1 */
   overflow: visible;
+  @include font($font-sans, $font-normal)
 }
 
 /**
