@@ -96,7 +96,6 @@ header
       display: flex 
 
     .nav-item
-      padding: .7em 0 .7em 1.4em
       cursor: pointer
       transition: background .3s ease
 
@@ -111,7 +110,12 @@ header
           background: transparent
 
     .nav-link 
+      display: block
+      padding: .7em 0 .7em 1.4em
       transition: color .3s ease
+
+      @include respond-to(medium-and-larger)
+        display: inline
 
       &:hover  
         @include respond-to(medium-and-larger)

@@ -12,8 +12,13 @@ menu.addEventListener('click', () => {
 });
 
 document.addEventListener('click', e => {
-  if (e.target.closest('.nav')) return; 
-
+  if (e.target.closest('.nav')) {
+    if (e.target.className === 'nav-link') {
+      nav.classList.remove('nav-show');
+    } else {
+      return;
+    }
+  }
   nav.classList.remove('nav-show');
 });
 
