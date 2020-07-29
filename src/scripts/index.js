@@ -23,7 +23,7 @@ document.addEventListener('click', e => {
 });
 
 
-/*** Gallery  ***/
+/*** Gallery ***/
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 
@@ -73,4 +73,43 @@ const swiperTesti = new Swiper('.swiper-container-testimonial', {
     el: '.swiper-pagination',
     clickable: true,
   },
+});
+
+
+/*** Smooth Scroll ***/
+
+const smoothScroll = (target, duration) => {
+  const targetElement = document.querySelector(target);
+  const targetPos = targetElement.getBoundingClientRect().top;
+  const startPos = window.pageYOffset || window.scrollY;
+  let startTime = null;
+
+  const animation = (currentTime) => {
+    if (startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+
+    let run = ease(timeElapsed, startPos, targetPos, duration);
+    scrollTo(0, run);
+
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  };
+
+  const ease = (currTime, startVal, changeInVal, timeDuration) => {
+    currTime /= timeDuration;
+    currTime--;
+    return changeInVal * (Math.pow(currTime, 5) + 1) + startVal;
+  };
+
+  requestAnimationFrame(animation);
+};
+
+const navLinks = document.querySelectorAll('a[href^="#"]');
+
+navLinks.forEach(navLink => {
+  const target = navLink.getAttribute('href');
+
+  navLink.addEventListener('click', e => {
+    e.preventDefault();
+    smoothScroll(target, 2000);
+  }); 
 });
