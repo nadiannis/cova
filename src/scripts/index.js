@@ -12,6 +12,12 @@ menu.addEventListener('click', () => {
   nav.classList.toggle('nav-show');
 });
 
+window.addEventListener('scroll', () => {
+  if (nav.classList.contains('nav-show') && window.pageYOffset > 0) {
+    nav.classList.remove('nav-show');
+  }
+});
+
 document.addEventListener('click', e => {
   if (e.target.closest('.nav')) {
     if (e.target.className === 'nav-link') {
