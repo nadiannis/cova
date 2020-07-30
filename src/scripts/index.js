@@ -125,11 +125,21 @@ const rellax = new Rellax('.rellax');
 
 const header = document.querySelector('header');
 const hero = document.querySelector('.hero');
+let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > hero.offsetHeight - header.offsetHeight) {
     header.classList.add('background');
   } else {
     header.classList.remove('background');
+  }
+
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (window.pageYOffset > hero.offsetHeight + header.offsetHeight) {
+    const top = (scrollTop > lastScrollTop) ? '-110px' : '0';
+    header.style.top = top;
+    lastScrollTop = scrollTop;
+  } else {
+    header.style.top = '0';
   }
 });
