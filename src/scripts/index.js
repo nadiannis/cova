@@ -119,3 +119,17 @@ navLinks.forEach(navLink => {
 /*** Parallax Effect ***/
 
 const rellax = new Rellax('.rellax');
+
+
+/*** Animated Sticky Navbar ***/
+
+const header = document.querySelector('header');
+const hero = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > hero.offsetHeight - header.offsetHeight) {
+    header.classList.add('background');
+  } else {
+    header.classList.remove('background');
+  }
+});
