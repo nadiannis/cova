@@ -1,5 +1,6 @@
 import '../styles/main.sass';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Rellax from 'rellax';
 
 
 /*** Navigation ***/
@@ -113,3 +114,8 @@ navLinks.forEach(navLink => {
     smoothScroll(target, 2000);
   }); 
 });
+
+
+/*** Parallax Effect ***/
+
+const rellax = new Rellax('.rellax');
