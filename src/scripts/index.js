@@ -2,6 +2,7 @@ import '../styles/main.sass';
 import '../images/icons/favicon.ico';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import Rellax from 'rellax';
+import ScrollOut from "scroll-out";
 
 
 /*** Navigation ***/
@@ -149,4 +150,22 @@ window.addEventListener('scroll', () => {
   } else {
     header.style.top = '0';
   }
+});
+
+
+/*** Scroll Animation ***/
+
+ScrollOut({
+  targets: ['.btn-anim', '.come-taste-it-anim'],
+  threshold: .8
+});
+
+ScrollOut({
+  targets: '.cup-1-anim',
+  threshold: .3
+});
+
+ScrollOut({
+  targets: '.cup-2-anim',
+  threshold: .2
 });
