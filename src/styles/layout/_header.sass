@@ -139,6 +139,13 @@ header
   .subscribe-btn
     order: 3
 
+    @include respond-to(extra-wide-and-larger)
+      width: 30px
+      height: 30px
+
+  .subscribe-icon
+    width: 100%
+
 .background
   background: $secondary
   box-shadow: 0 2px 10px rgba(0, 8, 15, .2)
