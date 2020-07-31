@@ -1,4 +1,5 @@
 import '../styles/main.sass';
+import '../images/icons/favicon.ico';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import Rellax from 'rellax';
 

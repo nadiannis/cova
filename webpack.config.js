@@ -37,11 +37,20 @@ module.exports = {
         }]
       },
       {
-        test: /\.(png|jpe?g|svg|gif|ico)$/,
+        test: /\.(png|jpe?g|svg|gif)$/,
         use: [{
           loader: 'file-loader',
           options: {
             name: 'img/[contenthash].[ext]'
+          }
+        }]
+      },
+      {
+        test: /favicon\.ico$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
           }
         }]
       },
