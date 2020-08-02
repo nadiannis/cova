@@ -7,6 +7,7 @@ import './scrollAnimation';
 import Nav from './nav';
 import Navbar from './navbar';
 import SmoothScroll from './smoothScroll';
+import { imgObserver } from './lazyLoad';
 
 
 /*** Navigation ***/
@@ -21,3 +22,9 @@ navLinks.forEach(navLink => {
 
 /*** Animated Sticky Navbar ***/
 new Navbar();
+
+/*** Lazy Load ***/
+const images = document.querySelectorAll('[data-src]');
+images.forEach(image => {
+  imgObserver.observe(image);
+});
