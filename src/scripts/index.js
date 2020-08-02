@@ -4,6 +4,7 @@ import './swiperGallery';
 import './swiperTesti';
 import './parallax';
 import './scrollAnimation';
+import Preloader from './preloader';
 import Nav from './nav';
 import Navbar from './navbar';
 import SmoothScroll from './smoothScroll';
@@ -28,3 +29,7 @@ const images = document.querySelectorAll('[data-src]');
 images.forEach(image => {
   imgObserver.observe(image);
 });
+
+/*** Preloader ***/ 
+const loader = document.querySelector('.loader');
+new Preloader(loader);

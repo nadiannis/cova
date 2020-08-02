@@ -1,0 +1,19 @@
+.loader 
+  position: fixed 
+  top: 0 
+  left: 0 
+  width: 100%
+  height: 100%
+  background: $secondary
+  display: flex 
+  justify-content: center 
+  align-items: center
+  z-index: 50
+
+.hide 
+  animation: fadeOut .8s forwards 
+
+@keyframes fadeOut
+  100%
+    opacity: 0 
+    visibility: hidden
