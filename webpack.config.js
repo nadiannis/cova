@@ -32,7 +32,21 @@ module.exports = {
         use: [{
           loader: 'html-loader',
           options: {
-            minimize: true 
+            minimize: true,
+            attributes: {
+              list: [
+                {
+                  tag: 'img',
+                  attribute: 'src',
+                  type: 'src',
+                },
+                {
+                  tag: 'img',
+                  attribute: 'data-src',
+                  type: 'src',
+                }
+              ]
+            }
           }
         }]
       },
