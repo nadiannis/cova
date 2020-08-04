@@ -1,7 +1,7 @@
 {
   "name": "cova",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal & modern coffee shop one-page site",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development"
@@ -10,7 +10,19 @@
     "type": "git",
     "url": "git+https://github.com/nadiannis/cova.git"
   },
-  "keywords": [],
+  "keywords": [
+    "landing-page", 
+    "one-page", 
+    "frontend",
+    "javascript", 
+    "sass", 
+    "css", 
+    "html", 
+    "static-site", 
+    "webpack", 
+    "coffee", 
+    "coffee-shop"
+  ],
   "author": "Annisa Nadia",
   "license": "MIT",
   "bugs": {
