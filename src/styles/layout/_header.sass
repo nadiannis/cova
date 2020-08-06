@@ -44,10 +44,6 @@ header
       order: 2
       margin-top: auto
 
-  .nav
-    @include respond-to(medium-and-larger)
-      margin-right: 3.3em
-
   .menu-btn
     cursor: pointer
     display: block
@@ -69,33 +65,37 @@ header
       background: $white
       transition: all .3s
 
-  .nav-list
-    background: $secondary
-    font-size: 1.18rem
-    font-weight: $font-normal
-    list-style: none
-    margin: 0
-    padding: 4.5em 0 0 0
-    position: absolute
-    top: 0
-    left: -80%
-    max-width: 260px
-    width: 65%
-    height: 100vh
-    box-shadow: 4px 0px 10px 8px rgba(0, 0, 0, 0.15)
-    transition: left .2s cubic-bezier(1, 0, 0, 1)
-
+  .nav
     @include respond-to(medium-and-larger)
-      position: static
-      padding: 0
-      width: auto
-      height: auto 
-      max-width: none
-      background: transparent
-      box-shadow: none
-      display: flex 
+      margin-right: 3.3em
 
-    .nav-item
+    &-list
+      background: $secondary
+      font-size: 1.18rem
+      font-weight: $font-normal
+      list-style: none
+      margin: 0
+      padding: 4.5em 0 0 0
+      position: absolute
+      top: 0
+      left: -80%
+      max-width: 260px
+      width: 65%
+      height: 100vh
+      box-shadow: 4px 0px 10px 8px rgba(0, 0, 0, 0.15)
+      transition: left .2s cubic-bezier(1, 0, 0, 1)
+
+      @include respond-to(medium-and-larger)
+        position: static
+        padding: 0
+        width: auto
+        height: auto 
+        max-width: none
+        background: transparent
+        box-shadow: none
+        display: flex 
+
+    &-item
       cursor: pointer
       transition: background .3s ease
 
@@ -109,7 +109,7 @@ header
         @include respond-to(medium-and-larger)
           background: transparent
 
-    .nav-link 
+    &-link 
       display: block
       padding: .7em 0 .7em 1.4em
       transition: color .3s ease
@@ -122,7 +122,6 @@ header
           color: #d5d5d5
 
   .nav-show
-
     .nav-list
       left: -1px
 

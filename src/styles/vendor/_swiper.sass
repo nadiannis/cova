@@ -14,9 +14,9 @@
     width: 13px
     height: 13px
 
-.swiper-pagination-bullet-active
-  background: $primary
-  border: none 
+  &-active
+    background: $primary
+    border: none
 
 .gallery
   .swiper-container
@@ -49,13 +49,13 @@
       @include respond-to(extra-wide-and-larger)
         font-size: 2.5rem
 
-  .swiper-button-next
-    @include respond-to(extra-wide-and-larger)
-      right: 17px
+    &-next
+      @include respond-to(extra-wide-and-larger)
+        right: 17px
 
-  .swiper-button-prev
-    @include respond-to(extra-wide-and-larger)
-      left: 17px
+    &-prev
+      @include respond-to(extra-wide-and-larger)
+        left: 17px
 
 .testimonial
   .swiper-wrapper 
