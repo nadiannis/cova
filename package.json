@@ -48,6 +48,6 @@
   "dependencies": {
     "rellax": "^1.12.1",
     "scroll-out": "^2.2.11",
-    "swiper": "^6.0.4"
+    "swiper": "^6.5.1"
   }
 }
