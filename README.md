@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <a href="https://covaweb.site"><img width="140" height="140" src="https://raw.githubusercontent.com/nadiannis/cova/master/readme_img/cova.png"></a>
+  <a href="https://covaweb.netlify.app"><img width="140" height="140" src="https://raw.githubusercontent.com/nadiannis/cova/master/readme_img/cova.png"></a>
   <br><br>
   <p><strong>Landing Page of</strong></p>
   <h1>C O V A</h1>
@@ -12,13 +12,14 @@
   </p>
   <br>
   
-  [**View the Page**](https://covaweb.site)
+  [**View the Page**](https://covaweb.netlify.app)
 </div>
 
 <img src="https://raw.githubusercontent.com/nadiannis/cova/master/readme_img/desktop_display.jpg">
 <br>
 
-## Description 
+## Description
+
 **COVA** is an ~~imaginary~~ awesome coffee shop that needs a landing page to boost their conversions & grow their customer. The landing page of **COVA** is designed with Figma, built with HTML5, CSS3 (Sass), and JavaScript using modern build tools.
 
 <br>
@@ -29,7 +30,7 @@
 
 ## View the Page
 
-### Go to the page: [covaweb.site](https://covaweb.site) 
+### Go to the [page](https://covaweb.netlify.app)
 
 **-or-**
 
@@ -38,25 +39,31 @@
 - Requirement: Install [Node.js](https://nodejs.org)
 
 - Clone the repo.
-    ```bash
-    $ git clone https://github.com/nadiannis/cova.git
-    ```
+
+  ```bash
+  git clone https://github.com/nadiannis/cova.git
+  ```
 
 - Install the dependencies.
-    ```bash
-    $ npm install
-    ```
+
+  ```bash
+  npm install
+  ```
 
   #### Development
+
   Run the local webpack-dev-server & open [http://localhost:8080](http://localhost:8080)
+
   ```bash
-  $ npm run dev
+  npm run dev
   ```
 
   #### Production
+
   To open the project in production mode, run:
+
   ```bash
-  $ npm run build
+  npm run build
   ```
 
 ## Contributing
